@@ -80,12 +80,16 @@ const usuariosPatch=(req,res=response)=>{
 const usuariosDelete=async(req, res=response)=> {
     const {id}=req.params;
 
+    //req.usuario es enviado desde el middleware validarJWT 
+    // const usuarioAutenticado=req.usuario;
+
     //fisicamente se borra
     // const usuario=await Usuario.findByIdAndDelete(id);
     const usuario=await Usuario.findByIdAndUpdate(id,{estado:false});
     res.json({
         msg:"delete API - controlador",
         usuario,
+        // usuarioAutenticado
     })
 }
 
