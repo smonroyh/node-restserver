@@ -21,6 +21,7 @@ const usuarioSchema = Schema({
     role:{
         type: String,
         required: [true, 'el rol debe ser obligatorio'],
+        default:'USER_ROLE',
         Enumerator:['ADMIN_ROLE', 'USER_ROLE'],
         // emun:['ADMIN_ROLE', 'USER_ROLE'],
     },

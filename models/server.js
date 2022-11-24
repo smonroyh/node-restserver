@@ -10,6 +10,7 @@ class Server{
 
         this.userPath='/api/user';
         this.authPath='/api/auth';
+        
 
         //conectar a la base de datos
         this.conectarDB();
